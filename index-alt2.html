@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en"id="coke-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Make your Friday lunch</title>
+
+    <link rel="stylesheet" href="./css/tailwind.min.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet"> -->
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="full-screen" content="yes"/>
+<meta name="screen-orientation" content="portrait"/>
+</head>
+<body>
+  <audio id="menu-sound" loop>
+    <source src="sound/menu.mp3">  
+  </audio>
+
+  <audio id="food-select-sound" loop>
+    <source src="sound/choosing_food.mp3">  
+  </audio>
+  <div class="main-container">
+    <!-- <div class="header">
+      <div class="">
+        <img src="img/friday.png" class="header-image" >
+      </div>
+     </div> -->
+
+    <div id="game">
+      
+        <div id="homeScreen" class="wrap" id="bg_img_wrap2">
+          <div class="bg_img_pos gameon_textpos"><span>For now the</span><span> Game is on</span></div>
+          <div class="bg_img_pos stroke4_copy_img stroke4_pos">
+            <a href="javascript:void(0)" id="startGame" class="bg_img_pos fordhaka_text fordhaka_pos"><span>for Dhaka</span></a>
+          </div>
+          
+          <div class="coca-cola-logo"></div>
+        </div>
+
+
+        <div class="wrap hidden" id="challengeScreen">
+          <div class="calender"id="cal_img"></div>
+          <div class="stroke-one"></div>
+          <div class="dishes">
+            <div class="veg" id="veg_Id"></div>
+            <div class="fish" id="fish_id"></div>
+            <div class="meat" id="meat_Id"></div>
+            <div class="rice" id="rice_Id"></div>
+          </div>
+          <div class="gues-text" id="cus_text">
+            <div class="text-cus"><span id="pick-guess">Pick</span> <span class="user-name">Your</span><br>Favorite</div>
+            <div class="friday-lunch" id="cus_id"></div>
+          </div>
+          <div class="lets-go-stroke" id="img2_container">
+            <a href="javascript:void(0)" id="challengeStart"  class="lets-go-button"></a>
+          </div>
+          <div class="coca-cola-logo"></div>
+        </div>
+
+<!------NEW ONLY DHAKA AVAILABLE PAGE------->
+        <div id="homeScreenAlt" class="wrap hidden" style="background-image: url('./img/blur2.jpg');">
+          <div class="bg_img_pos stroke4_copy_img stroke4_pos">
+            <a href="javascript:void(0)" id="startGame" class="bg_img_pos fordhaka_text fordhaka_pos"><span>For now you can only<br>win Coca-Cola in dhaka</span></a>
+          </div>
+           <div class="coca-cola-logo" style="filter: blur(5px);"></div>
+        </div>
+
+
+
+        <div class="wrap hidden" id="challengeScreenAlt">
+          <div class="calender"id="cal_img">
+            <img id="user-profile-picture" src="img/girl.png" class="profile-images">
+          </div>
+          <div class="stroke-one stroke-one-alt"></div>
+          <div class="dishes dishes-alt">
+            <div class="veg veg-alt"></div>
+            <div class="fish fish-alt"></div>
+            <div class="meat meat-alt"></div>
+            <div class="rice rice-alt" id="rice1"></div>
+          </div>
+          <div class="gues-text">
+            <div class="text-cus">Guess <span id="challenge-user-name" class="user-name">John</span>'s<br>Favorite</div>
+            <div class="friday-lunch"></div>
+          </div>
+          <div class="lets-go-stroke lets-go-stroke-alt" id="img_container">
+            <a href="javascript:void(0)" id="challengeStartAlt"  class="lets-go-button lets-go-button-alt"></a>
+          </div>
+          
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <div class="wrap hidden" id="step1">
+          <div class="bg_img_pos whitecalender_img side_dish_calender" id="">
+            <div class="side_dish_text" id="">
+              <div class="text-cus">
+                <span id="user-name" class="user-name">Rice is a must! Pick one..</span>
+              </div>
+            </div>
+          </div>
+          <div data-step="1" class="dishes"Id="fullwdishes">
+            <div data-food="polao" class="food-select bg_img_pos serve_tray motorrice_img motorrice" id="polao"></div>
+            <div  class="bg_img_pos  polao_text_img polao_text" id=""></div>
+            <div  class="bg_img_pos  plainRiceText_img plainRiceText" id=""></div>
+            <div data-food="rice" class="food-select bg_img_pos  plainrice_img plainrice" id="rice"></div>
+            <div data-food="khichuri" class="food-select bg_img_pos  khichuri_img khichuri" id="khichuri"></div>
+            <div  class="bg_img_pos  khichuri_text_img khichuri_text" id=""></div>
+            <div class="bg_img_pos  biriyani_text_img biriyani_text" id=""></div>
+            <div data-food="biriyani" class="food-select bg_img_pos rice biriyani_pos" id="biriyani"></div>
+
+                <div data-food="polao" class="the-clickable-circle" id="for-polao"></div>
+                <div data-food="rice" class="the-clickable-circle" id="for-rice"></div>
+                <div data-food="khichuri" class="the-clickable-circle" id="for-khichuri"></div>
+                <div data-food="biriyani" class="the-clickable-circle" id="for-biriyani"></div>
+            <div class="bg_img_pos numberCircle_rice">1/5</div>
+          </div>
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <div class="wrap hidden" id="step2">
+          <div class="bg_img_pos whitecalender_img meat_calender rotate_straight" id="">
+            <div class="bg_img_pos meat_text" id="">
+              <div class="text-cus">
+                <span id="user-name" class="user-name">Pick from one of these<br> meaty mains..</span>
+              </div>
+            </div>
+          </div>
+          <div data-step="2" class="dishes"Id="fullwdishes">
+            <div data-food="mutton" class="food-select bg_img_pos  mutton_img mutton_pos" id=""></div>
+            <div class="bg_img_pos  muttonrezala_img muttonlogo_pos" id=""></div>
+            <div class="bg_img_pos  beefrezalalogo_img beeflogo_pos" id=""></div>
+            <div data-food="beef" class="food-select bg_img_pos  beefrezala_img beefrezala_pos" id=""></div>
+            <div data-food="chicken" class="food-select bg_img_pos  chickenrezala_img chickenrezala_pos" id=""></div>
+            <div class="bg_img_pos  chickenlogo_img chickenlogo_pos" id=""></div>
+            <div class="bg_img_pos  roastlogo_img roastlogo_pos" id=""></div>
+            <div data-food="roast" class="food-select bg_img_pos   roast_img roast_pos" id=""></div>
+
+
+
+                <div data-food="mutton" class="the-clickable-circle" id="for-mutton"></div>
+                <div data-food="beef" class="the-clickable-circle" id="for-beef"></div>
+                <div data-food="chicken" class="the-clickable-circle" id="for-chicken"></div>
+                <div data-food="roast" class="the-clickable-circle" id="for-roast"></div>
+            <div class="numberCircle bg_img_pos">2/5</div>
+            
+          </div>
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <div  class="wrap hidden" id="step3">
+          <div class="bg_img_pos whitecalender_img meal_calender" id="">
+            <div class="gues-text meal_text" id="">
+              <div class="text-cus">
+                <span id="user-name" class="user-name">Now what would make<br><div class="extra_space">this meal extra special?</div> </span>
+              </div>
+            </div>
+          </div>
+          <div data-step="3" class="dishes"Id="fullwdishes"> 
+            <div data-food="ilish" class="food-select bg_img_pos Ilish_fry_img ilis_pos" id=""></div>
+            <div class="bg_img_pos Ilish_fry_text_img ilish_fry_text_pos" id=""></div>
+            <div data-food="dimvuna" class="food-select bg_img_pos dimvhuna_img dimbhuna_pos" id=""></div>
+            <div class="bg_img_pos dimvhuna_text_img dimbhuna_text_pos" id=""></div>
+            <div data-food="shutki" class="food-select bg_img_pos shutkibhuna_img shutkibhuna_pos" id=""></div>
+            <div class="bg_img_pos shutkibhuna_text_img shutkibhuna_text_pos" id=""></div>
+            <div class="bg_img_pos kabab_text_img kabab_txt_pos" id=""></div>
+            <div data-food="kabab" class="food-select bg_img_pos kabab_img kabab_img_pos"id=""></div>
+
+                <div data-food="ilish" class="the-clickable-circle" id="for-ilish"></div>
+                <div data-food="dimvuna" class="the-clickable-circle" id="for-dimvuna"></div>
+                <div data-food="shutki" class="the-clickable-circle" id="for-shutki"></div>
+                <div data-food="kabab" class="the-clickable-circle" id="for-kabab"></div>
+            <div class="numberCircle_meal bg_img_pos ">3/5</div>
+          </div>
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <div class="wrap hidden" id="step4">
+          <div class="calender_sidedish whitecalender_img" id="">
+            <div class="side_dish_text" id="">
+              <div class="text-cus">
+                <span id="user-name" class="user-name">How about a side dish?</span>
+              </div>
+            </div>
+          </div>
+          <div data-step="4" class="dishes"Id="fullwdishes">
+            <div data-food="begunvaji" class="food-select bg_img_pos  begunvaji_img begunvaji_img_pos " id=""></div>
+            <div class="bg_img_pos  begunfrylogo_img begunfrylogo_pos" id=""></div>
+            <div data-food="vegetable" class="food-select bg_img_pos  vegetable_img vegetable_img_pos" id=""></div>
+            <div class="bg_img_pos  vegetablelogo_img vegetablelogo_pos" id=""></div>
+            <div class="bg_img_pos  saladlogo_img saladlogo_pos" id=""></div>
+            <div data-food="salad" class="food-select bg_img_pos salad_img salad_img_pos" id=""></div>
+            
+            <div data-food="vorta" class="food-select bg_img_pos bhorta_img bhorta_pos " id=""></div>
+            <div class="bg_img_pos bhortalogo_img bhortalogo_pos" id=""></div>
+
+
+
+                <div data-food="begunvaji" class="the-clickable-circle" id="for-begunvaji"></div>
+                <div data-food="vegetable" class="the-clickable-circle" id="for-vegetable"></div>
+                <div data-food="salad" class="the-clickable-circle" id="for-salad"></div>
+                <div data-food="vorta" class="the-clickable-circle" id="for-vorta"></div>
+            <div class="numberCircle_sidedish bg_img_pos digit_right">4/5</div>
+            
+          </div>
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <div data-step="5" class="wrap hidden" id="step5">
+          <div class="calender Calendarwhite" id="">
+              <div class="this-page-info">
+                The fantastic Friday lunch<br>you just created is incomplete<br>without Coca-Cola.
+              </div>
+          </div>
+          <div style="cursor: pointer;" class="here-you-go coke-select"></div>
+          
+          <div class="all-selected-foods">
+            <div id="selected-veg" class="selected-veg"></div>
+            <div id="selected-fish" class="selected-fish"></div>
+            <div id="selected-meat" class="selected-meat"></div>
+            <div id="selected-rice" class="selected-rice"></div>
+          </div>
+          <div style="cursor: pointer;" class="select-cocacola coke-select"></div>
+          <div class="numberCircle_coco_cola bg_img_pos">5/5</div>
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <div class="wrap hidden" id="submit-phone" style="background-image: url('./img/side-cocacola-01.jpg');background-size: cover;">
+          <!--<div class="bg_img_pos full-circle-left"></div>!-->
+          <!-- <div class="coca-cola-rotete-left-logo-img coke-rotate-right"></div> -->
+          <div class="bg_img_pos get-connected">Let's<br>get connected<br>
+          so that we can send<br>your Coco-Cola!</div>
+          <div class="bg_img_pos coke-glass-img coke-glass-pos"></div>
+          <div class="bg_img_pos user_number_stroke_pos submit_stroke_img">
+            <div class="bg_img_pos user_number_text"><span>
+               <input type="tel" id="user-phone" size="15" name="user-phone" placeholder="01XXXXXXXXX" pattern = "[0-9]{12}" required>
+            </span></div>
+          </div>
+          <!-- Must be input box -->
+          <div class="bg_img_pos submit_stroke_pos submit_stroke_img">
+            <a href="javascript:void(0)" id="submit-phone-button" class="bg_img_pos submit_text"><span>Submit</span></a>
+          </div>
+        </div>
+
+<!------INBOX MESSAGE PAGE New------->
+        <div class="wrap hidden" id="inbox-message" style="background-image: url('./img/side-cocacola-01.jpg');background-size: cover;">
+          <!--<div class="bg_img_pos full-circle-left"></div>!-->
+          <!-- <div class="coca-cola-rotete-left-logo-img coke-rotate-right"></div> -->
+          <div class="bg_img_pos inbox-message">Inbox 'Friday Lunch' to<br>Coca-Cola Bangladesh<br>
+          Facebook page and get your<br>code to redeem Coca-Cola!</div>
+          <div class="bg_img_pos coke-glass-img coke-glass-pos"></div>
+
+           <div class="bg_img_pos next_stroke_pos submit_stroke_img">
+            <a href="javascript:void(0)" id="next-button" class="bg_img_pos next_text"><span>Next</span></a>
+          </div>
+        
+        </div>
+
+
+
+<!------FULL SCORE PAGE------->
+        <div class="wrap hidden" id="score-full">
+          <div class="bg_img_pos stroke4_copy_img Congrat-stroke-pos">
+            <div class="bg_img_pos congratulate_text congratulate_pos"><span class="cong-text">Congratulations</span></div>
+          </div>
+          <div class="bg_img_pos whitecircle" Id="score">
+            <div class="bg_img_pos point">
+              <span>
+                <div id="challenge-score" class="bg_img_pos upper_number">10</div>
+                <br>
+                <div class="bg_img_pos middle_divide">/</div>
+                <br>
+                <div class="bg_img_pos lower_number">10</div>
+                
+              </span>
+            </div>
+          </div>
+      
+          <div class="bg_img_pos stroke_main_copy_img win-stroke-pos">
+            <div style="cursor: pointer;" id="shareResult" class="bg_img_pos win_text wintext_pos"><span>Share & Win Coca-Cola</span></div>
+          </div>
+      
+          <div class="bg_img_pos stroke_1_img quiz-win-stroke-pos">
+            <div style="cursor: pointer;" id="restartGame" class="restartGame bg_img_pos reward_text congratulate_pos"><span>Create quiz & win<br>1 more Coca-Cola</span></div>
+          </div>
+          
+          <div class="coca-cola-logo"></div>
+        </div>
+
+        <!------AVERAGE SCORE PAGE------->
+        <div class="wrap hidden" id="score-average" style="background-image: url('./img/Less-than-0-01.jpg');background-size: cover;">
+          <div class="bg_img_pos coke_bangla_logo">
+            
+          </div>
+          <div class="bg_img_pos whitecircle" Id="score">
+            <div class="bg_img_pos point">
+              <span>
+                <div id="challenge-score-avg" class="bg_img_pos upper_number">6</div>
+                <br>
+                <div class="bg_img_pos middle_divide">/</div>
+                <br>
+                <div class="bg_img_pos lower_number">10</div>
+                
+              </span>
+            </div>
+          </div>
+      
+          <div class="bg_img_pos stroke_1_img share-stroke-pos">
+            <div style="cursor: pointer;" id="shareResult" class="bg_img_pos wintext_pos"><span>Share</span></div>
+          </div>
+      
+          <div class="bg_img_pos stroke_main_copy_img quiz-average-stroke-pos">
+            <div style="cursor: pointer;" id="restartGame" class="restartGame bg_img_pos average_text congratulate_pos"><span>Create Quiz & Win Coca-Cola</span></div>
+          </div>
+          
+         
+        </div>
+<!------SHARE WITH FRIEND PAGE------->
+        <div id="share-with-friends" class="wrap hidden" style="background-image: url('./img/side-cocacola-01.jpg');background-size: cover;">
+          <!--<div class="bg_img_pos full-circle"></div>!-->
+          <!-- <div class="coca-cola-rotete-left-logo-img coke-rotate-logo"></div> -->
+          <div class="bg_img_pos tag-away-and-win">Now<br>tag away<br>and Win<br>COCA-COLA</div>
+          <!-- <div class="bg_img_pos coke-bootle-img coke-bootle-pos"></div> -->
+          <div class="bg_img_pos share_stroke_pos share_stroke_img">
+            <a href="javascript:void(0)"  class="share-button bg_img_pos share_text"><span>Share</span></a>
+            <!-- <a href="javascript:void(0)" id="play-again" class="bg_img_pos share_text"><span>Play Again</span></a> -->
+          </div>
+          
+        </div>
+
+    </div>
+  </div>
+    
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script> -->
+
+<script src="script/firebase-app.js"> </script>
+<script src="script/firebase-firestore.js"> </script>
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <!-- <script src="script/bootstrap.min.js"></script> -->
+    <script src="script/sweetalert2.min.js"></script>
+    <script src="script/html2canvas.js"></script>
+    <script src="script/lottie.js"></script>
+    <script src="script/image_data.js"></script>
+    <script src="script/game.js"></script>
+</body>
+</html>

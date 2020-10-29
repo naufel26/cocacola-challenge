@@ -1,0 +1,1666 @@
+/* cyrillic */
+@font-face {
+  font-family: 'Neucha';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Neucha'), url(Neucha-Regular.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Neucha';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Neucha'), url(Neucha-cursive.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+#coke-html{
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrap {
+  width: 380px;
+  height: 690px;
+  margin: auto;
+  background-color: #FF1E2B;
+  overflow: hidden;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'Neucha', cursive;
+}
+#cal_img{
+  background-image: url(../img/Calender01Red.png);
+}
+.calender {
+    width: 110%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 245px;
+    margin: auto;
+    position: absolute;
+    left: -18px;
+    top: 14px;
+    z-index: 6;
+}
+.stroke-one {
+    -ms-transform: rotate(20deg);
+    transform: rotate(81deg) scaleX(-1);
+    width: 113%;
+    background-image: url(../img/StrokeMain.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 188px;
+    position: absolute;
+    top: 100px;
+    left: -164px;
+    z-index: 2;
+}
+.gues-text {
+    position: absolute;
+    display: inline-block;
+    font-size: 34px;
+    color: white;
+    top: 26%;
+    letter-spacing: 0px;
+    left: 43%;
+    transform: rotate(-6deg);
+    line-height: 39px;
+}
+.friday-lunch {
+    position: absolute;
+    width: 210px;
+    height: 108px;
+    left: -13px;
+    top: 71px;
+    background-image: url(../img/friday-lunch.png);
+    background-size: contain;
+    transform: rotate(6deg);
+    background-repeat: no-repeat;
+}
+.dishes {
+  width: 248px;
+  position: absolute;
+  top: 0px;
+  height: 587px;
+  z-index: 6;
+}
+
+.veg {
+    background-image: url(../img/Begun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 110px;
+    position: absolute;
+    z-index: 10;
+    left: -4%;
+    top: 20%;
+    transform: rotate(0deg);
+}
+.fish {
+    background-image: url(../img/Ilish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 89px;
+    position: absolute;
+    z-index: 10;
+    left: 4%;
+    top: 36%;
+    transform: rotate(-8deg);
+}
+.meat {
+    background-image: url(../img/Mutton.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 160px;
+    height: 172px;
+    position: absolute;
+    z-index: 10;
+    left: -4%;
+    top: 53%;
+}
+.rice {
+  background-image: url(../img/biriyani.png);
+  
+}
+#rice1{
+  background-size: contain;
+  width: 251px;
+  height: 201px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 10;
+  left: 10%;
+  transform: rotate(-7deg);
+  top: 76%;
+}
+#img_container{
+  background-image: url(../img/Stroke4.png);
+}
+.lets-go-stroke {
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+  width: 309px;
+  height: 125px;
+  left: 88px;
+  top: 617px;
+  z-index: 9999;
+}
+.lets-go-button {
+    background-image: url(../img/lets-go.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 168px;
+    position: absolute;
+    height: 68px;
+    left: 14%;
+    top: 27%;
+}
+.coca-cola-logo {
+  width: 106%;
+  position: absolute;
+  height: 200px;
+  background-image: url(../img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -59px;
+}
+
+.profile-images {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    left: 158px;
+    top: 37px;
+}
+
+/* style for pick your favourite*/
+/*#bg_img_wrap{
+  background-image: url(../img/NextTemplate.png);
+}*/
+#img2_container {
+    background-image: url(../img/Stroke1.png);
+    width: 364px;
+    height: 134px;
+    left: 63px;
+    top: 425px;
+}
+#veg_Id {
+    transform: rotate(3deg);
+    top: 12%;
+    left: -5%;
+}
+#fish_id{
+  top: 25%;
+}
+#meat_Id {
+    top: 36%;
+    left: 5%;
+    height: 140px;
+}
+#rice_Id {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 53%;
+    left: 7%;
+    width: 204px;
+    height: 170px;
+}
+#cus_guess{
+  top: 27%;
+  left: 43%;
+  font-size: 46px;
+}
+#cus_id {
+    left: -11px;
+    top: 50px;
+}
+
+/* style for Rice choose is a Must*/
+
+.side_dish_calender {
+    width: 112%;
+    height: 245px;
+    margin: auto;
+    left: -18px;
+    top: -41px;
+    z-index: 6;
+}
+.side_dish_text{
+  font-size: 44px;
+  color: white;
+  top: 36%;
+  letter-spacing: 1px;
+  left: 13%;
+  transform: rotate(-6deg);
+  line-height: 48px;
+}
+.text_left{
+  letter-spacing: 4px;
+  left: 13%;
+}
+#fullwdishes
+{
+  margin: auto;
+  position: relative;
+  width: 100%;
+  top: 19%;
+}
+.motorrice_img{
+  background-image: url(../img/Polao.png);
+}
+.motorrice {
+  width: 218px;
+  height: 111px;
+  left: -44%;
+  float: left;
+  top: -6%;
+  transform: rotate(0deg);
+  zoom: 3;
+  z-index: 6;
+}
+.polao_text_img{
+  background-image: url(../img/PolaoText.png);
+}
+.polao_text {
+    width: 74px;
+    height: 37px;
+    left: 2%;
+    top: 18%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.plainRiceText_img{
+   background-image: url(../img/riceText.png);
+}
+.plainRiceText {
+    width: 79px;
+    height: 42px;
+    right: 5%;
+    top: 10%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.plainrice_img{
+  background-image: url(../img/PlainRice.png);
+}
+.plainrice {
+    width: 131px;
+    height: 90px;
+    right: -19%;
+    top: 7%;
+    transform: rotate(0deg);
+    zoom: 3;
+    z-index: 6;
+}
+.khichuri_img{
+  background-image: url(../img/Khichuri.png);
+}
+.khichuri {
+    width: 125px;
+    height: 88px;
+    left: -24%;
+    float: left;
+    top: 25%;
+    transform: rotate(0deg);
+    zoom: 3;
+    z-index: 6;
+}
+.khichuri_text_img{
+  background-image: url(../img/khichuritext.png);
+}
+.khichuri_text {
+    width: 85px;
+    height: 43px;
+    left: 7%;
+    top: 51%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.biriyani_text_img{
+   background-image: url(../img/biriyaniText.png);
+}
+.biriyani_text {
+    z-index: 6;
+    right: 4%;
+    top: 45%;
+    transform: rotate(0deg);
+    width: 70px;
+    height: 49px;
+}
+.biriyani_pos {
+    right: -8%;
+    top: 45%;
+    zoom: 3;
+    z-index: 6;
+    width: 97px;
+    height: 78px;
+}
+.numberCircle_rice {
+    top: 393px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 4px;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    font: 18px Arial, sans-serif;
+    left: 9%;
+    line-height: 25px;
+}
+
+/* guess......,s favourite friday lunch*/
+
+#opposite{
+  left: 21px;
+  top: 18%;
+}
+#left0 {
+    left: 106px;
+    -webkit-transform: rotate(-84deg);
+    transform: rotate(-84deg);
+    width: 129%;
+    height: 283px;
+}
+
+#mirror{
+  top: -66px;
+  left: 57%;
+}
+#cal_img_right{
+  background-image:  url(../img/calender-reverse.png);
+    left: -23px;
+    top: -15px;
+}
+/*css for design03(what would make this meal extra special)*/
+.whitecalender_img{
+   background-image:  url(../img/whitecalender.png);
+  
+}
+.meal_calender {
+    left: -26px;
+    top: -45px;
+    width: 112%;
+    height: 252px;
+    margin: auto;
+    z-index: 6;
+    transform: rotate(11deg);
+}
+.extra_space{
+  margin-left: 27px;
+}
+
+.meal_text {
+    font-size: 34px;
+    color: white;
+    top: 34%;
+    letter-spacing: 1px;
+    left: 12%;
+    transform: rotate(-14deg);
+    line-height: 42px;
+}
+
+.Ilish_fry_img{
+  background-image: url(../img/Ilish.png);
+}
+.ilish_wh{
+  width: 211px;
+  height: 90px;
+}
+.ilis_pos {
+    width: 119px;
+    height: 77px;
+    z-index: 6;
+    left: -13%;
+    float: left;
+    top: -6%;
+    transform: rotate(-7deg);
+    zoom: 3;
+}
+.Ilish_fry_text_img{
+  background-image: url(../img/ilishfrytext.png);
+}
+.ilish_fry_text_pos {
+    width: 100px;
+    height: 55px;
+    top: 17%;
+    left: 6%;
+    z-index: 6;
+    transform: rotate(0deg);
+}
+.dimvhuna_img{
+  background-image: url(../img/dimbhuna.png);
+}
+.dimbhuna_pos {
+    width: 149px;
+    height: 75px;
+    z-index: 6;
+    right: -34%;
+    top: 15%;
+    transform: rotate(0deg);
+    zoom: 3;
+}
+.dimvhuna_text_img{
+  background-image: url(../img/dimbhunatext.png);
+}
+.bg_img_pos{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  cursor: pointer;
+}
+.text_logo{
+  width: 103px;
+  height: 56px;
+}
+.dimbhuna_text_pos {
+    width: 88px;
+    height: 56px;
+    right: 53%;
+    top: 25%;
+    transform: rotate(0deg);
+}
+.shutkibhuna_img{
+  background-image: url(../img/shutkibhuna.png);
+}
+.shutkibhuna_pos {
+    z-index: 6;
+    left: -36%;
+    float: left;
+    top: 34%;
+    transform: rotate(0deg);
+    zoom: 3;
+    width: 150px;
+    height: 77px;
+}
+.shutkibhuna_text_img{
+  background-image: url(../img/shutkitext.png);
+}
+.shutkibhuna_text_pos {
+    z-index: 6;
+    left: 3%;
+    top: 53%;
+    width: 63px;
+    height: 59px;
+    transform: rotate(0deg);
+}
+.kabab_text_img{
+  background-image: url(../img/kabatext.png);
+}
+.kabab_txt_pos {
+    right: 4%;
+    top: 50%;
+    transform: rotate(0deg);
+    width: 103px;
+    height: 46px;
+    z-index: 6;
+}
+
+.kabab_img{
+  background-image: url(../img/Kabab.png);
+}
+.kabab_img_pos {
+    right: -17%;
+    top: 52%;
+    transform: rotate(0deg);
+    zoom: 3;
+    width: 145px;
+    height: 74px;
+    z-index: 6;
+}
+.serve_tray {
+    width: 165px;
+    height: 90px;
+}
+.numberCircle_meal{
+  top: 522px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 8px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  font: 22px Arial, sans-serif;
+  left: 9%;
+}
+/* style for 2/5 meaty main*/
+.whitecalender_img{
+   background-image:  url(../img/whcalender.png);
+  
+}
+.meat_calender {
+    left: -20px;
+    top: -43px;
+    width: 111%;
+    height: 249px;
+    margin: auto;
+    z-index: 6;
+}
+.meat_text {
+    font-size: 32px;
+    color: white;
+    top: 37%;
+    letter-spacing: 1px;
+    left: 15%;
+    transform: rotate(-8deg);
+    line-height: 43px;
+}
+
+
+.rotate_straight{
+  transform: rotate(5deg);
+}
+.no_rotation{
+  letter-spacing: 5px;
+  left: 14%;
+}
+.mutton_img{
+  background-image: url(../img/Mutton.png);
+}
+.mutton_pos {
+    width: 85px;
+    height: 74px;
+    z-index: 6;
+    left: 42%;
+    top: -6%;
+    transform: rotate(-11deg);
+    zoom: 3;
+}   
+.muttonrezala_img{
+  background-image: url(../img/muttonrezala.png);
+}
+.muttonlogo_pos {
+    width: 127px;
+    height: 40px;
+    right: 5%;
+    top: 19%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.beefrezalalogo_img{
+  background-image: url(../img/Beffrazala.png);
+}
+.beeflogo_pos {
+    width: 124px;
+    height: 57px;
+    left: 8%;
+    top: 7%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+
+.beefrezala_img{
+  background-image: url(../img/beefrezala.png);
+}
+.beefrezala_pos {
+    width: 156px;
+    height: 100px;
+    right: 18%;
+    top: 2%;
+    zoom: 3;
+    z-index: 6;
+}
+.chickenrezala_img{
+  background-image: url(../img/chickenrezala.png);
+}
+.chickenrezala_pos {
+    width: 152px;
+    height: 94px;
+    left: 14%;
+    top: 23%;
+    zoom: 3;
+    z-index: 6;
+}
+.chickenlogo_img{
+  background-image: url(../img/chickenlogo.png);
+}
+.chickenlogo_pos {
+    width: 141px;
+    height: 64px;
+    left: 63%;
+    top: 51%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.roast_img{
+  background-image: url(../img/roast.png);
+}
+.roast_pos {
+    width: 160px;
+    height: 100px;
+    right: 9%;
+    top: 45%;
+    zoom: 3;
+    z-index: 6;
+}
+.roastlogo_img{
+  background-image: url(../img/roastlogo.png);
+}
+.roastlogo_pos {
+    width: 70px;
+    height: 61px;
+    right: 76%;
+    top: 48%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.numberCircle {
+    top: 393px;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    padding: 5px;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    font: 17px Arial, sans-serif;
+    left: 82%;
+    box-sizing: border-box;
+}
+.digit_right{
+  left: 83%;
+}
+.digit_left
+{
+  left:12%;
+}
+/*css for side dish*/
+.calender_sidedish {
+    width: 111%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 228px;
+    margin: auto;
+    position: absolute;
+    left: -16px;
+    top: -5px;
+    z-index: 6;
+}
+.side_dish_text {
+    position: absolute;
+    display: inline-block;
+    font-size: 33px;
+    color: white;
+    top: 38%;
+    letter-spacing: 0px;
+    left: 13%;
+    transform: rotate(-6deg);
+    line-height: 48px;
+}
+.begunvaji_img{
+  background-image: url(../img/Begun.png);
+}
+.begunvaji_img_pos {
+    left: 19%;
+    top: -10%;
+    transform: rotate(-2deg);
+    zoom: 3;
+    width: 109px;
+    height: 80px;
+    z-index: 6;
+}
+.begunfrylogo_img{
+  background-image: url(../img/begunlogo.png);
+}
+.begunfrylogo_pos {
+    right: 14%;
+    top: 13%;
+    transform: rotate(0deg);
+    width: 88px;
+    height: 32px;
+    z-index: 6;
+}
+.vegetable_img{
+  background-image: url(../img/vegetable.png);
+}
+.vegetable_img_pos {
+    right: 27%;
+    top: 13%;
+    zoom: 3;
+    width: 124px;
+    height: 77px;
+}
+.vegetablelogo_img{
+  background-image: url(../img/vegetablelogo.png);
+}
+.vegetablelogo_pos {
+    left: 1%;
+    top: 36%;
+    transform: rotate(0deg);
+    width: 98px;
+    height: 37px;
+    z-index: 6;
+}
+.saladlogo_img{
+  background-image: url(../img/saladlogo.png);
+}
+.saladlogo_pos {
+    left: 82%;
+    top: 28%;
+    transform: rotate(0deg);
+    width: 58px;
+    height: 40px;
+    z-index: 6;
+}
+.salad_img{
+  background-image: url(../img/salad.png);
+}
+.salad_img_pos {
+    left: 15%;
+    top: 27%;
+    zoom: 3;
+    width: 139px;
+    height: 82px;
+    z-index: 6;
+}
+.bhorta_img{
+  background-image: url(../img/bhorta.png);
+}
+.bhorta_pos {
+    right: 21%;
+    top: 51%;
+    zoom: 3;
+    width: 125px;
+    height: 75px;
+    z-index: 6;
+}
+.bhortalogo_img{
+  background-image: url(../img/bhortalogo.png);
+}
+.bhortalogo_pos {
+    width: 77px;
+    height: 47px;
+    right: 23%;
+    top: 62%;
+    transform: rotate(0deg);
+    z-index: 6;
+}
+.numberCircle_sidedish{
+  top: 519px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 8px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  font: 22px Arial, sans-serif;
+  left: 82%;
+}
+
+/*css forchoose-coke.html*/
+.Calendarwhite {
+    background-image: url(../img/whitecalender.png);
+    left: -17px;
+    top: -3px;
+}
+.this-page-info {
+    position: absolute;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 30%;
+    letter-spacing: 0px;
+    left: -5px;
+    transform: rotate(-6deg);
+    line-height: 31px;
+}
+.coca-cola-logo {
+    width: 106%;
+    position: absolute;
+    height: 200px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -73px;
+    left: -9px;
+}
+.here-you-go {
+    background-image: url(../img/hereUgo.png);
+    left: 124px;
+    top: 179px;
+    width: 37%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 67px;
+    margin: auto;
+    position: absolute;
+    z-index: 20;
+}
+.all-selected-foods {
+  width: 100%;
+  height: 480px;
+  position: absolute;
+  bottom: -73px;
+}
+.selected-veg {
+    background-image: url(../img/Begun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 279px;
+    height: 150px;
+    position: absolute;
+    z-index: 10;
+    left: -73px;
+    top: 37px;
+}
+.selected-fish {
+    background-image: url(../img/Ilish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 231px;
+    height: 183px;
+    position: absolute;
+    z-index: 10;
+    top: 16px;
+    right: -29px;
+}
+.selected-meat {
+    background-image: url(../img/Mutton.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 244px;
+    position: absolute;
+    z-index: 10;
+    top: 71px;
+    left: -37px;
+}
+.selected-rice {
+    background-image: url(../img/biriyani.png);
+    background-size: contain;
+    width: 234px;
+    height: 197px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    right: -38px;
+}
+.select-cocacola {
+    background-image: url(../img/cokeglass.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 291px;
+    height: 422px;
+    position: absolute;
+    z-index: 10;
+    left: 33px;
+    top: 181px;
+}
+.numberCircle_coco_cola {
+    top: 524px;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 4px;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    font: 18px Arial, sans-serif;
+    left: 82%;
+    line-height: 25px;
+}
+/*css for share.html*/
+.coca-cola-rotete-left-logo-img{
+  background-image: url(../img/cocologorl.png);
+}
+.coke-rotate-logo {
+    width: 59%;
+    position: absolute;
+    height: 889px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -99px;
+    left: -30%;
+}
+.full-circle{
+  width: 1000px;
+  height: 1000px;
+  border: 2px solid white;
+  border-radius: 50%;
+  left: -100%;
+  top: -6%;
+  box-shadow: 0px 0px 7px 0px white;
+}
+.tag-away-and-win {
+    font-size: 46px;
+    color: white;
+    top: 30%;
+    letter-spacing: 1px;
+    left: 10%;
+    line-height: 51px;
+    text-align: center;
+}
+.away_left{
+  left: -44%;
+}
+.coke-bootle-img{
+  background-image: url(../img/bottle.png);
+}
+.coke-bootle-pos {
+    width: 265px;
+    height: 604px;
+    position: absolute;
+    z-index: 10;
+    left: 145px;
+    top: -4px;
+}
+.share_stroke_img{
+  background-image: url(../img/Stroke4.png);
+}
+.share_stroke_pos {
+    width: 162px;
+    height: 70px;
+    left: 53px;
+    top: 424px;
+}
+.share_text {
+    color: red;
+    font-size: 36px;
+    left: 49px;
+    top: 10px;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+/*css for submit.html*/
+.coke-rotate-right {
+    width: 60%;
+    position: absolute;
+    height: 711px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -12px;
+    left: 62%;
+}
+.full-circle-left{
+  width: 1000px;
+  height: 1000px;
+  border: 2px solid white;
+  border-radius: 50%;
+  top: -6%;
+  box-shadow: 0px 0px 7px 0px white;
+}
+.get-connected {
+    font-size: 27px;
+    color: white;
+    top: 17%;
+    letter-spacing: 0px;
+    left: 7%;
+    /* transform: rotate(-6deg); */
+    line-height: 32px;
+    text-align: right;
+}
+.sub_text_right{
+  right: 15px;
+}
+.re_pos{
+  left: -7%;
+}
+.re_pos_cola{
+  left: -10%;
+}
+.coke-glass-img{
+  background-image: url(../img/cokeglass.png);
+}
+.coke-glass-pos {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 299px;
+    height: 450px;
+    position: absolute;
+    z-index: 6;
+    left: -14px;
+    top: 364px;
+}
+.submit_stroke_img{
+  background-image: url(../img/Stroke4.png);
+}
+.submit_stroke_pos {
+    width: 144px;
+    height: 58px;
+    left: 65px;
+    top: 335px;
+    z-index: 6;
+}
+.submit_text {
+    color: red;
+    font-size: 29px;
+    left: -26px;
+    top: 6px;
+    height: 45px;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+}
+input#user-phone {
+    top: -34px;
+    position: absolute;
+    left: 22px;
+    background-color: #ffffff00;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.user_number_stroke_img{
+  background-image: url(../img/Stroke1.png);
+
+}
+.user_number_stroke_pos {
+    width: 339px;
+    height: 90px;
+    left: -35px;
+    top: 251px;
+    z-index: 6;
+    cursor: pointer;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.user_number_text{
+  color: red;
+  font-size: 32px;
+  left: 48px;
+  top: 62px;
+  height: 93px;
+  width: 164px;
+  cursor: pointer;
+
+}
+/*for dhaka*/
+.gameon_textpos {
+    font-size: 27px;
+    color: white;
+    top: 31%;
+    letter-spacing: 0px;
+    left: 16%;
+    transform: rotate(-12deg);
+    line-height: 44px;
+}
+.stroke4_copy_img{
+  background-image: url(../img/Stroke4.png);
+}
+.stroke4_pos {
+    width: 480px;
+    height: 193px;
+    left: -53px;
+    top: 36%;
+    transform: rotate(-184deg);
+    right: 0;
+}
+.fordhaka_text {
+    color: red;
+    font-size: 30px;
+    left: -2%;
+    text-align: center;
+    top: 35%;
+    width: 100%;
+    cursor: pointer;
+    transform: rotate(-176deg);
+    line-height: 29px;
+}
+/*css for congratulation.html*/
+.Congrat-stroke-pos {
+    width: 360px;
+    height: 137px;
+    z-index: 6;
+    top: 7%;
+}
+.congratulate_text{
+  color: red;
+  font-size: 46px;
+  left: 102px;
+  top: 132px;
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+.whitecircle {
+    height: 145px;
+    width: 145px;
+    background-color: white;
+    border-radius: 50%;
+    top: 28%;
+    left: 31%;
+    text-align: center;
+}
+.point{
+  color: red;
+  width: 100%;
+  height: 100%;
+}
+.upper_number {
+    top: 7%;
+    font-size: 67px;
+    width: 103px;
+    height: 55px;
+}
+.middle_divide{
+  font-size: 68px;
+  left: 42%;
+  top: 34%;
+  width: 20px;
+  height: 57px;
+  z-index: 5;
+}
+.lower_number {
+    right: 22px;
+    top: 41%;
+    font-size: 43px;
+}
+.stroke_main_copy_img{
+  background-image: url(../img/StrokeMain.png);
+}
+.win-stroke-pos {
+    width: 287px;
+    height: 78px;
+    top: 56%;
+    left: 12%;
+}
+.congratulate_text{
+  color: red;
+  font-size: 46px;
+  left: 103px;
+  top: 140px;
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+.win_text {
+    font-size: 23px;
+    color: red;
+    top: 30%;
+    left: 18%;
+}
+.stroke_1_img{
+  background-image: url(../img/Stroke1.png);
+}
+.quiz-win-stroke-pos {
+    height: 107px;
+    width: 236px;
+    top: 66%;
+    left: 20%;
+    z-index: 6;
+}
+.reward_text {
+    width: 202px;
+    height: 50px;
+    font-size: 23px;
+    color: red;
+    top: 27%;
+    left: 14%;
+    line-height: 26px;
+}
+
+.the-clickable-circle{
+  position: relative;
+  border-radius: 50%;
+  z-index: 9;
+  cursor: pointer;
+  /*background: #0000005e;*/
+}
+div#for-polao {
+    top: -1%;
+    left: -3%;
+    height: 122px;
+    width: 239px;
+}
+div#for-rice {
+    top: -7%;
+    left: 42%;
+    height: 133px;
+    width: 236px;
+}
+div#for-khichuri {
+    top: -11%;
+    left: -2%;
+    height: 115px;
+    width: 231px;
+}
+
+div#for-biriyani {
+    top: -13%;
+    left: 36%;
+    height: 138px;
+    width: 255px;
+}
+div#for-mutton {
+    top: -3%;
+    left: 42%;
+    height: 144px;
+    width: 245px;
+    transform: rotate(-11deg);
+}
+div#for-beef {
+    top: -11%;
+    left: -8%;
+    height: 146px;
+    width: 241px;
+    transform: rotate(6deg);
+}
+
+div#for-chicken {
+    top: -19%;
+    left: 45%;
+    height: 149px;
+    width: 231px;
+    transform: rotate(-4deg);
+}
+div#for-roast {
+    top: -21%;
+    left: -3%;
+    height: 125px;
+    width: 245px;
+    transform: rotate(-34deg) skew(22deg, 19deg);
+    border-radius: 0;
+}
+
+div#for-ilish {
+    top: -12%;
+    left: -6%;
+    height: 250px;
+    width: 298px;
+    transform: rotateX(-65deg) rotateY(19deg) skew(6deg, 23deg);
+    border-radius: 0;
+}
+div#for-kabab {
+    top: -48%;
+    left: 24%;
+    height: 253px;
+    width: 395px;
+    transform: rotateX(-65deg) rotateY(19deg) skew(6deg, 23deg);
+    border-radius: 0;
+}
+
+div#for-dimvuna {
+    top: -26%;
+    left: 45%;
+    height: 140px;
+    width: 226px;
+    transform: rotate(-4deg);
+}
+
+div#for-shutki {
+    top: -33%;
+    left: -7%;
+    height: 145px;
+    width: 250px;
+    transform: rotate(7deg);
+}
+div#for-begunvaji {
+    top: -13%;
+    left: 32%;
+    height: 226px;
+    width: 279px;
+    transform: rotateX(-66deg) rotateY(12deg) skew(-8deg, 23deg);
+    border-radius: 0;
+}
+
+div#for-vegetable {
+    top: -22%;
+    left: -7%;
+    height: 127px;
+    width: 245px;
+    transform: rotate(-4deg);
+}
+
+div#for-salad {
+    top: -30%;
+    left: 37%;
+    height: 135px;
+    width: 258px;
+    transform: rotate(-9deg);
+}
+div#for-vorta {
+    top: -33%;
+    left: 0%;
+    height: 150px;
+    width: 225px;
+    transform: rotate(8deg);
+}
+#step3 .numberCircle_meal {
+    top: 395px;
+    width: 34px;
+    height: 35px;
+    left: 9%;
+    font: 18px Arial, sans-serif;
+    padding: 4px;
+    line-height: 23px;
+}
+#step4 .numberCircle_sidedish.bg_img_pos.digit_right {
+    top: 392px;
+    width: 34px;
+    height: 34px;
+    padding: 4px;
+    font: 18px Arial, sans-serif;
+    left: 82%;
+    line-height: 26px;
+}
+
+.veg.veg-alt {
+    top: 15%;
+}
+
+.fish.fish-alt {
+    top: 29%;
+}
+
+.meat.meat-alt {
+    top: 37%;
+    left: 1%;
+}
+
+div#rice1 {
+    width: 193px;
+    height: 160px;
+    top: 57%;
+    left: 7%;
+}
+
+.lets-go-stroke-alt {
+    width: 257px;
+    height: 105px;
+    left: 62px;
+    top: 465px;
+}
+
+.lets-go-button-alt {
+    width: 154px;
+    height: 68px;
+    left: 21%;
+    top: 22%;
+}
+.cong-text{
+  position: relative;
+    top: -54%;
+    left: -22%;
+}
+.inbox-message {
+    font-size: 23px;
+    color: white;
+    top: 30%;
+    letter-spacing: 0px;
+    left: 2%;
+    line-height: 29px;
+    text-align: center;
+}
+.next_stroke_pos{
+  width: 144px;
+    height: 48px;
+    left: 65px;
+    top: 335px;
+    z-index: 6;
+}
+.next_text{
+  color: red;
+    font-size: 29px;
+    left: -26px;
+    top: 3px;
+    height: 45px;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+}
+.coke_bangla_logo {
+    background-image: url(../img/coke-bangla-logo-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 369px;
+    height: 137px;
+    z-index: 6;
+    top: 7%;
+    left: 2%;
+}
+.share-stroke-pos {
+    width: 142px;
+    height: 78px;
+    top: 56%;
+    left: 31%;
+}
+.wintext_pos {
+    font-size: 23px;
+    color: red;
+    top: 30%;
+    left: 29%;
+}
+.quiz-average-stroke-pos {
+    height: 107px;
+    width: 330px;
+    top: 66%;
+    left: 8%;
+    z-index: 6;
+}
+.average_text {
+    width: 100%;
+    font-size: 23px;
+    color: red;
+    top: 38%;
+    left: 14%;
+    line-height: 26px;
+}
+
+.fish-right {
+    width: 162px;
+    height: 100px;
+    top: 21%;
+    left: -4%;
+    transform: rotate(-6deg);
+}
+.meat-right {
+    left: -1%;
+    top: 29%;
+}
+.veg-right {
+    width: 200px;
+    height: 137px;
+    left: -20%;
+    top: 48%;
+    transform: rotate(5deg);
+}
+.rice-right {
+  background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 10;
+    transform: rotate(-7deg);
+    width: 239px;
+    height: 202px;
+    top: 60%;
+    left: -25%;
+}
+.win-cola{
+  position: absolute;
+    width: 210px;
+    height: 108px;
+    left: -13px;
+    top: 71px;
+    background-image: url(../img/win-coacola.png);
+    background-size: contain;
+    transform: rotate(6deg);
+    background-repeat: no-repeat;
+}
+.letsgo-right {
+    width: 309px;
+    height: 102px;
+    left: 31px;
+    top: 469px;
+}
+.letsgo-button-right{
+    width: 156px;
+    height: 68px;
+    left: 28%;
+    top: 22%;
+}
+
+.challenge-coke {
+    position: absolute;
+    width: 116px;
+    height: 158px;
+    left: 39px;
+    top: 284px;
+    background-image: url(../img/cokeglass.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+span#user-name {
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 500px) {
+  #coke-html {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0%, 0%);
+}
+.wrap {
+  width: 100%;
+  height: 100vh;
+
+}
+.stroke-one {
+    width: 113%;
+    height: 23%;
+    top: 18%;
+    left: -39%;
+}
+  .veg-phone-left {
+    width: 73% !important;
+    height: 22% !important;
+    top: 15% !important;
+    left: -5% !important;
+}
+  .fish-phone-left {
+    width: 76% !important;
+    height: 21% !important;
+    top: 30% !important;
+}
+  .meat-phone-left{
+  width: 81% !important;
+  top: 42% !important;
+  left: 5% !important;
+  height: 36% !important;
+}
+  .rice-phone-left {
+    top: 66% !important;
+    left: 14% !important;
+    width: 100% !important;
+    height: 36% !important;
+    transform: rotate(-6deg);
+}
+  #img2_container {
+    background-image: url(../img/Stroke1.png);
+    width: 364px;
+    height: 134px;
+    left: 17%;
+    top: 65%;
+}
+  
+.gues-text {
+    top: 27%;
+    left: 47%;
+}
+.lets-go-button {
+    width: 63%;
+    height: 48%;
+    left: 14%;
+    top: 27%;
+}
+  .lets-go-stroke-alt {
+    width: 300px;
+    height: 126px;
+    left: 91px;
+    top: 589px;
+}
+  .lets-go-button-alt {
+    width: 185px;
+    height: 68px;
+    left: 21%;
+    top: 26%;
+}
+.profile-images {
+    position: absolute;
+    width: 129px;
+    height: 129px;
+    background: #ffffff;
+    border-radius: 50%;
+    left: 37%;
+    top: 20%;
+}
+
+}
+@media screen and (max-width: 400px) {
+.dishes {
+    width: 232px;
+    position: absolute;
+    top: -25px;
+    left: -6px;
+    height: 587px;
+    z-index: 6;
+}
+#rice_Id {
+    top: 58%;
+    left: 10%;
+    width: 90%;
+    height: 26%;
+    transform: rotate(-13deg);
+}
+  .friday-lunch {
+    width: 187px;
+    height: 79px;
+  }
+  .lets-go-button {
+    width: 168px;
+    height: 68px;
+    left: 22%;
+    top: 28%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+

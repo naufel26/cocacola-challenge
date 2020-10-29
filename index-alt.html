@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Make your Friday lunch</title>
+
+    <link rel="stylesheet" href="./css/tailwind.min.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="full-screen" content="yes"/>
+<meta name="screen-orientation" content="portrait"/>
+</head>
+<body>
+  <audio id="menu-sound" loop>
+    <source src="sound/menu.mp3">  
+  </audio>
+
+  <audio id="food-select-sound" loop>
+    <source src="sound/choosing_food.mp3">  
+  </audio>
+  <div class="main-container">
+    <!-- <div class="header">
+      <div class="">
+        <img src="img/friday.png" class="header-image" >
+      </div>
+     </div> -->
+
+    <div id="game">
+      <div id="loading" class="font-bold text-center text-2xl ">
+        <img src="img/loading.gif" class="image-centre" style="width: 100%;" >
+      </div>
+        <div id="homeScreen" class="font-bold text-center text-2xl hidden">
+          <div style="width: 100%; position: relative; height: 500px;">
+            <div style="width:100%;height:100%; position: absolute; top:0 px; left: 0px; " id="bodymovin"></div>
+            <img src="img/home-main.png" class="image-centre" style="width: 100%; position: absolute; left: 0 px; top: 0px" >
+          </div>
+          
+          <!-- <div class="headline-text">TAP TO CONTINUE</div> -->
+            <button id="startGame" class="focus:outline-none home-play-text anim-button">Tap to Continue</button>
+            <button id="chooseAsync" class="focus:outline-none home-play-text anim-button">Choose Async</button>
+            <button id="getContextPlayers" class="focus:outline-none home-play-text anim-button">Get context players</button>
+        </div>
+        <div id="challengeScreen" class="text-center hidden">
+          <div class="head">
+            <div class="menu-button">
+              <img src="img/ham.png" style="width: 40%;">
+            </div>
+            <a href="javascript:void(0)" id="howtoplayButton" class="how-to-button">
+              <img src="img/play-game.png" style="width: 20%; float: right;">
+            </a>
+          </div>
+          <div style="width: 83%; position: relative; height: 500px; margin: auto;">
+            <div style="width:100%;height:100%; position: absolute; top:0 px; left: 0px; " id="bodymovin2"></div>
+            <img src="img/celebrity.png" class="image-centre" style="width: 100%; position: absolute; left: 0 px; top: 0px" >
+          </div>
+          <div style="margin-top: 6px;">
+            <button id="volumeButton" class="volume-button  focus:outline-none">&nbsp;</button>
+            <button id="challengeStart" class="anim-button challenge-button" style="padding: 11px;">&nbsp;</button>
+            <button id="leaderboardButton" class="leaderboard-button  focus:outline-none">&nbsp;</button>
+          </div>
+
+        </div>
+            
+
+        <div id="playnowScreen" class="challange-sec text-center hidden">
+          <div style="width:284px;height:293px; position: absolute; top:146px; left: 78px; " id="bodymovin3"></div>
+          <div class="head">
+            <div class="menu-button">
+              <img src="img/ham.png">
+            </div>
+            <a href="javascript:void(0)" id="howtoplayButton" class="how-to-button">
+              <img src="img/play-game.png" style="width: 20%; float: right;">
+            </a>
+          </div>
+
+          <div class="bod">
+            <div class="text-big">
+              <span>what's on</span><br>
+              <span class="friend-name">Rafsan's</span><br>
+              <span>friday lunch?</span><br>
+            </div>
+            <div class="text-small">guess the menu<br>within 30 seconds</div>
+            <button id="playNow">
+            <div class="play-now">play now</div>
+            </button>
+          </div>
+
+        </div>
+
+
+        <div id="howtoPlayScreen" class="how-to-play-screen text-center hidden">
+          <div class="head">
+            <a href="javascript:void(0)" id="go-back-challenge" class="go-back"><i class="arrow left"></i>
+            </a>
+          </div>
+          <div class="bod" style="width: 320px;">
+            <div class="icon-play">
+              <img src="img/play-game.png" style= "height: 50px; margin:auto;">
+            </div>
+           <div class="headline-text">HOW TO PLAY</div>
+            <div class="options"> 
+              <div class="op1">YOU CAN ONLY SELECT 7 ITEM WITHIN 30 SECONDS</div> 
+              <div class="op1" style= "padding-top: 16px; padding-bottom: 16px;">1 MAIN ITEM IS A MUST HAVE</div>
+            </div>
+            <div class="too-small-text">SHARE IT WITH YOUR FRIENDS</div>
+
+            <div class="social-media-share">
+              <a href="javascript:void(0)" id="shareResult" style="display: inline-block;">
+                <img class="fb" src="img/fb.png "style= "height: 30px;">
+              </a>
+              <!-- <img class="insta" src="img/insta.png "style= "height: 30px;"> -->
+            </div>              
+          </div>
+        </div>
+
+        <div id="leaderboardScreen" class="leaderboard-screen text-center hidden">
+          <div class="head">
+            <a href="javascript:void(0)" id="go-back-challenge" class="go-back"><i class="arrow left"></i>
+            </a>
+          </div>
+          <div class="bod" style="width: 320px;">
+            <div class="icon-play">
+              <img src="img/leaderboard.png" style= "height: 65px; margin:auto;">
+            </div>
+           <div class="headline-text" style= "margin-bottom: 0px">leaderboard</div>
+           <div class="mediam-small-text">Top 5</div>
+           <div id="leaderboard-content" class="all-leader-content">
+              
+           </div>
+            <div class="mediam-small-text">SHARE</div>
+
+            <div class="social-media-share">
+              <a href="javascript:void(0)" id="shareResult" style="display: inline-block;">
+                <img class="fb" src="img/fb.png "style= "height: 30px;">
+              </a>
+              <!-- <img class="insta" src="img/insta.png "style= "height: 30px;"> -->
+            </div>              
+          </div>
+        </div>
+          
+
+        <div id="gamePlay" class="hidden text-center gameWrap">
+          <main class="grid-item main gameplayHead">
+            <div class="timer">
+              <div class="timer-wrap">
+                <h2 id="time" class="time">30</h2>
+                <input type="hidden" id="timer-input" name="timer_input" value="30">
+              </div>
+              <div class="timer-title">seconds to go</div>
+            </div>
+              <div class="items">
+                <div id="item-1" class="item item1 main-item">
+                    <img src="img/chicken_biriyani.png" alt="Smiley face" class="item-image" />
+                    <h6 class="food-caption">Chicken Biryani</h6>
+                </div>
+                <div id="item-2" class="item item2 gravy-item">
+                  <img src="img/chicken_curry.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Chicken Rezala</h6>
+                </div>
+                <div id="item-3" class="item item3 coke">
+                  <img src="img/coke.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Coke</h6>
+                </div>
+                <div id="item-4" class="item item4">
+                  <img src="img/dim.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Dim Bhuna</h6>
+                </div>
+                <div id="item-5" class="item item5">
+                  <img src="img/begun.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Begun Fry</h6>
+                </div>
+                <div id="item-6" class="item item6">
+                  <img src="img/ilish.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Ilish Fry</h6>
+                </div>
+                <div id="item-7" class="item item7">
+                  <img src="img/kabab.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Kebab</h6>
+                </div>
+                <div id="item-8" class="item item8 main-item">
+                  <img src="img/khichuri.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Khichuri</h6>
+                </div>
+                <div id="item-9" class="item item9 meat-item">
+                  <img src="img/mutton.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Mutton Rezala</h6>
+                </div>
+                <div id="item-10" class="item item10 main-item">
+                  <img src="img/polao.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Polao</h6>
+                </div>
+                <div id="item-11" class="item item11">
+                  <img src="img/shrimp.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Chingri Bhuna</h6>
+                </div>
+                <div id="item-12" class="item item12 main-item">
+                  <img src="img/rice.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Rice </h6>
+                </div>
+                <div id="item-13" class="item item13 gravy-item">
+                  <img src="img/roast.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Roast</h6>
+                </div>
+                <div id="item-14" class="item item14">
+                  <img src="img/rui.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Rui Bhuna</h6>
+                </div>
+                <div id="item-15" class="item item15">
+                  <img src="img/shutki.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Shutki Bhuna</h6>
+                </div>
+                <div id="item-16" class="item item16 meat-item">
+                  <img src="img/beef.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Beef Rezala</h6>
+                </div>
+                <div id="item-17" class="item item17">
+                  <img src="img/veg.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Vegetable</h6>
+                </div>
+                <div id="item-18" class="item item18">
+                  <img src="img/vorta.png" alt="Smiley face" class="item-image" />
+                  <h6 class="food-caption">Bhorta</h6>
+                </div>
+              </div>    
+          </main>
+          
+          <div id="main-table-holder" class="table-position">
+            <img src=""  class="table-item regular-item noimage" style="bottom: 120px;left: 103px;height: 49px;" />
+            <img src=""  class="table-item regular-item noimage" style="bottom: 72px;left: 44px;height: 70px;" />
+            
+            <img src=""  class="table-item noimage regular-item" style="bottom: 71px;right: 39px;height: 67px;" />
+            <img src=""  class="table-item regular-item noimage" style="bottom: 127px;right: 88px;height: 44px;" />
+            <img src=""  class="table-item noimage regular-item" style="bottom: -3px;left: 28px;height: 100px;" />
+            
+            <img src=""  class="table-item  noimage main-item-food" style="bottom: -13px;right: 9px;height: 105px;" />
+
+            <img src=""  class="table-item noimage regular-item cocacola-item cocacola-regular-style" />
+            
+          </div>
+          <div class="options-holder">
+            <!-- <img src="img/lunch-menu.png" class="lunch-menu-image" > -->
+            <div class="options-title">Selected Items</div>
+            <div style="clear: both;"></div>
+            <ul class="food-list">
+
+            </ul>
+          </div>
+          <div id="submit-button-holder" style="margin-top: 10px;">
+            <button id="submitResult" class="submit-button playbutton  focus:outline-none">Submit</button>
+           <button id="inviteFriend" class="submit-button playbutton hidden focus:outline-none">Invite</button> 
+          </div>  
+        </div>
+        <div id="results" class=" text-center  hidden">
+
+          <div id="result-table-final" class="table-position result-table">
+            <img src="img/table-fixed.png" style="position: absolute; bottom: -9px;left: 0px;">
+            <img src=""  class="table-item result-item regular-item noimage" style="bottom: 50px; left: 10px;" />
+              <img src=""  class="table-item result-item regular-item noimage" style="bottom: 50px; left: 86px;" />
+              
+              <img src=""  class="table-item result-item regular-item noimage" style="bottom: 60px; right: 73px;" />
+              <img src=""  class="table-item result-item regular-item noimage" style="bottom: 55px; right: -10px;" />
+              <img src=""  class="table-item  result-item regular-item noimage" style="bottom: 4px; left: 33px;height: 70px;" />
+              
+              <img src=""  class="table-item  noimage main-item-food" style="bottom: -13px; right: -3px; height: 105px;" />
+
+              <img src="img/coke.png"  class="table-item noimage cocacola-item" style="bottom: 3px; left: 63px; height: 150px;" />
+              
+          </div>
+          <div class="options-holder">
+            <img src="img/lunch-menu.png" class="lunch-menu-image" >
+            <div style="clear: both;"></div>
+            <ul class="food-list result-food-list">
+
+            </ul>
+          </div>
+          <div id="share-button-holder" style="margin-top: 10px;">
+            <button id="shareResult" class="share-button playbutton  focus:outline-none">&nbsp;</button>
+          </div>
+
+        </div>
+        <div id="popUps" class="font-bold text-center hidden">
+          <div class="pop atlest-seven-items hidden">
+            <div class="pop-content" style="margin-top: 44px;">
+               <div class="message">you have to<br>pick any 7 items</div>
+               <div class="pop-image" style="background-image: url('img/Untitled-1-12.png'); height: 77px;"></div>
+            </div>
+            <img class="close-pop" src="img/itemCancel.png">
+          </div>
+
+           <div class="pop not-more-seven-items hidden">
+            <div class="pop-content">
+               <div class="message">oops !<br>you can only<br>select 7 items</div>
+               <div class="pop-image" style="background-image: url('img/oops.png'); height: 77px;"></div>
+            </div>
+            <img class="close-pop" src="img/itemCancel.png">
+          </div>
+
+          <div class="pop one-main-item-must hidden">
+            <div class="pop-content">
+               <div class="message" style="margin-bottom: 25px;margin-top: 15px;">1 main item is<br>a must have</div>
+               <div class="pop-image" style="background-image: url('img/oopsWhole.png'); height: 87px;"></div>
+            </div>
+            <img class="close-pop" src="img/itemCancel.png">
+          </div>
+
+          <div class="pop time-up try-pop hidden">
+            <div class="pop-content">
+              <div class="pop-image" style="background-image: url('img/oopsWhole.png'); height: 100px;"></div>
+               <div class="message try-message" style="margin-bottom: 25px;margin-top: 15px;">Time's Up<br><span class="message-sec">give it another shot</span></div>
+               <div class="leg-ornament"></div>
+               <button class="try-again-button">try again</button>
+               <div class="social-media-share">
+                <a href="javascript:void(0)" id="shareResult" style="display: inline-block;"><img src="img/fb.png" class="social fb"></a>
+                 <!-- <img src="img/insta.png" class="social insta"> -->
+              </div>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+          <div class="pop match-30 try-pop hidden">
+            <div class="pop-content">
+              <div class="pop-image" style="background-image: url('img/oopsWhole.png'); height: 100px;"></div>
+               <div class="message try-message" style="margin-bottom: 25px;margin-top: 15px;"><span id="1st-30">30</span>% match<br><span class="message-sec">give it another shot</span></div>
+               <div class="leg-ornament"></div>
+               <button class="try-again-button">try again</button>
+               <div class="social-media-share">
+                <a href="javascript:void(0)" id="shareResult" style="display: inline-block;"><img src="img/fb.png" class="social fb"></a>
+                 <!-- <img src="img/insta.png" class="social insta"> -->
+              </div>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+          <div class="pop match-50 try-pop hidden">
+            <div class="pop-content">
+              <div class="pop-image" style="background-image: url('img/Untitled-1-01.png'); height: 105px;"></div>
+               <div class="message try-message" style="margin-bottom: 16px;margin-top: 15px;"><span id="2nd-60">50</span>% match<br><span class="message-sec">it's ok.<br>one can always try</span></div>
+               <button class="try-again-button">try again</button>
+               <div class="social-media-share">
+                <a href="javascript:void(0)" id="shareResult" style="display: inline-block;"><img src="img/fb.png" class="social fb"></a>
+                 <!-- <img src="img/insta.png" class="social insta"> -->
+              </div>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+          <div class="pop match-80 try-pop hidden">
+            <div class="pop-content">
+              <div class="pop-image" style="background-image: url('img/Untitled-1-10.png');height: 109px;background-position: -23px center;"></div>
+               <div class="message try-message" style="margin-bottom: 25px;margin-top: 15px;">80% match<br><span class="message-sec">you can do better</span></div>
+               
+               <button class="try-again-button">try again</button>
+               <div class="social-media-share">
+                <a href="javascript:void(0)" id="shareResult" style="display: inline-block;"><img src="img/fb.png" class="social fb"></a>
+                 <!-- <img src="img/insta.png" class="social insta"> -->
+              </div>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+          <div class="pop match-90 try-pop hidden">
+            <div class="pop-content">
+              <div class="pop-image" style="background-image: url('img/Untitled-1-03.png');height: 121px;background-position: 19px 7px;"></div>
+               <div class="message try-message" style="margin-bottom: 16px;margin-top: 1px;">90% match<br><span class="message-sec">ah!<br>almost there</span></div>
+               <button class="try-again-button">try again</button>
+               <div class="social-media-share">
+                <a href="javascript:void(0)" id="shareResult" style="display: inline-block;"><img src="img/fb.png" class="social fb"></a>
+                 <!-- <img src="img/insta.png" class="social insta"> -->
+              </div>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+          <div class="pop match-100 try-pop hidden">
+            <div class="pop-content">
+              <div class="pop-image" style="background-image: url('img/Untitled-1-02.png');height: 106px;background-position: 32px 0px;"></div>
+               <div class="message try-message" style="margin-bottom: 19px;margin-top: 11px;line-height: 27px;">congrats<br>100% Match<br><span class="message-sec" style="margin-top: 19px;">you're the real master</span></div>
+               <div class="confetti-ornament"></div>
+               <button class="claim-price-button claim-price-reward">claim your price</button>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+          <div class="pop claim-reward hidden">
+            <div class="pop-content">
+              
+               <div class="message try-message" style="margin-bottom: 16px;margin-top: 0px;line-height: 27px;">give your number<br>to claim reward<br></div>
+              <input type="number" id="user-number" class="user-number" name="user-number" placeholder="01#-########" pattern="[0-9]{3}-[0-9]{8}" required>
+               <button class="claim-price-button submit-number">submit</button>
+                <button class="small-skip">skip the reward</button>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+
+           <div class="pop done hidden">
+            <div class="pop-content">
+              <div class="message try-message" style="margin-bottom: 16px;margin-top: 0px;line-height: 27px;">Done!<br><span class="message-sec" style="margin-top: 10px;">Share it with your friends</span>
+              </div>
+              <div class="social-media-share">
+                  <a href="javascript:void(0)" id="shareResult" style="display: inline-block;"><img src="img/fb.png" class="social fb"></a>
+                   <!-- <img src="img/insta.png" class="social insta"> -->
+              </div>
+              <button class="try-again-button">Play Again</button>
+            </div>
+            <!-- <img class="close-pop" src="img/itemCancel.png"> -->
+          </div>
+          <!-- <div class="not-more-seven-items"></div> -->
+    </div>
+
+          
+          <div id="footer" class="foot hidden">
+            powered by<img class="foot-logo" src="img/Footcoke.png">
+          </div>
+    </div>
+  </div>
+    
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script> -->
+
+<script src="script/firebase-app.js"> </script>
+<script src="script/firebase-firestore.js"> </script>
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <!-- <script src="script/bootstrap.min.js"></script> -->
+    <script src="script/sweetalert2.min.js"></script>
+    <script src="script/html2canvas.js"></script>
+    <script src="script/lottie.js"></script>
+    <script src="script/image_data.js"></script>
+    <script src="script/game.js"></script>
+</body>
+</html>
