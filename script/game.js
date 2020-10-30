@@ -288,24 +288,7 @@ $(document).on("click", "#shareChallenge", function(){
     $("#challengeScreenAlt2").removeClass("hidden");
     var imgData;
 
-    // html2canvas(document.getElementById("challengeScreenAlt2"), {
-    //     onrendered: function (canvas) {
-    //         // document.body.appendChild(canvas);
-    //         imgData = canvas.toDataURL();
-    //     //   imgData = IMG_DATA;
-    //     console.log(imgData);
-    //     FBInstant.shareAsync({
-    //         intent: 'REQUEST',
-    //         image: imgData,      
-    //         text: "Meh",
-    //         data: { challengeFacebookId: playerId},
-    //     }).then(function() {
-    //         console.log("sharing is done");
-    //         $("#challengeScreenAlt2").addClass("hidden");
-    //         // location.reload();
-    //        });
-    //     }     
-    // });
+    
 
     html2canvas(document.querySelector("#challengeScreenAlt2"),{
         logging: true,
@@ -316,6 +299,7 @@ $(document).on("click", "#shareChallenge", function(){
           imgData = canvas.toDataURL();
         //   imgData = IMG_DATA;
         console.log(imgData);
+        $("#challengeScreenAlt2").addClass("hidden");
         FBInstant.shareAsync({
             intent: 'REQUEST',
             image: imgData,      
@@ -375,18 +359,7 @@ function chooseAsync(){
 
 function startGame() {
     
-    // playSound(1);
-
-    // var animData = {
-    //     wrapper: document.getElementById('bodymovin2'),
-    //     animType: 'html',
-    //     loop: true,
-    //     prerender: true,
-    //     autoplay: true,
-    //     path: './animation/celeb.json'
-
-    // };
-    // var anim = bodymovin.loadAnimation(animData);
+    
 
     // hidecompChooses()
     // showButtons();
@@ -402,7 +375,7 @@ function startGame() {
     else{
         showchallengeScreen();
     }
-    
+    loadAnimation();
     // $("#footer").removeClass(" hidden");
     // updatephone()
 
@@ -410,18 +383,7 @@ function startGame() {
 
 function startChallenge()
 {
-    // playSound(1);
-    // var animData = {
-    //     wrapper: document.getElementById('bodymovin3'),
-    //     animType: 'html',
-    //     loop: true,
-    //     prerender: true,
-    //     autoplay: true,
-    //     path: './animation/rafsan.json'
-
-    // };
     
-    // var anim = bodymovin.loadAnimation(animData);
     if(isChallenge){
         hidechallengeScreenAlt() 
     }
